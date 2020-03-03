@@ -301,7 +301,7 @@ export class Articulation extends Modifier {
 
       if (isWithinLines(snappedLine, position)) glyph.setOrigin(0.5, 0.5);
 
-      y += Math.abs(snappedLine - articLine) * staffSpace * offsetDirection;
+      y += this.y_shift + Math.abs(snappedLine - articLine) * staffSpace * offsetDirection;
     }
 
     L(`Rendering articulation at (x: ${x}, y: ${y})`);
